@@ -1,0 +1,43 @@
+﻿@{
+    Layout = null;
+}
+<link href="~/Content/bootstrap.css" rel="stylesheet" />
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+<link href="~/Content/Site.css" rel="stylesheet" />
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+
+    <div class="container">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+
+                    <th scope="col">ID</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">email</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var p in ViewBag.result)
+                {
+                    <tr>
+                        <td>@p.ID</td>
+                        <td>@p.Name</td>
+                        <td>@p.Address</td>
+                        <td>@p.Email</td>
+
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
